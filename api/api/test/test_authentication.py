@@ -34,7 +34,7 @@ security_conf = WazuhResult({
     'rbac_mode': 'black'
 })
 decoded_payload = {
-    "iss": 'wazuh',
+    "iss": 'overwatch',
     "aud": 'Wazuh API REST',
     "nbf": 0,
     "nbf_ms": 0,
@@ -46,8 +46,8 @@ decoded_payload = {
 }
 
 original_payload = {
-    "iss": "wazuh",
-    "aud": "Wazuh API REST",
+    "iss": "overwatch",
+    "aud": "Overwatch API REST",
     "nbf": 0,
     "nbf_ms": 0,
     "exp": security_conf['auth_token_exp_timeout'],

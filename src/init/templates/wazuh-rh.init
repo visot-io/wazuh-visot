@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# Copyright (C) 2015, Wazuh Inc.
-# Wazuh         Controls Wazuh on Redhat-based systems
+# Copyright (C) 2015, Overwatch Inc.
+# Overwatch         Controls Overwatch on Redhat-based systems
 # Author:       Kayvan A. Sylvan <kayvan@sylvan.com>
 # Author:       Daniel B. Cid <dcid@ossec.net>
 #
 # chkconfig: 2345 99 15
-# description: Starts and stops Wazuh (Host Intrusion Detection System)
+# description: Starts and stops Overwatch (Host Intrusion Detection System)
 #
 # This will work on Redhat systems (maybe others too)
 
@@ -19,7 +19,7 @@ WAZUH_HOME=WAZUH_HOME_TMP
 WAZUH_CONTROL="$WAZUH_HOME/bin/wazuh-control"
 
 start() {
-    echo -n "Starting Wazuh: "
+    echo -n "Starting Overwatch: "
     ${WAZUH_CONTROL} start > /dev/null
     RETVAL=$?
     if [ $RETVAL -eq 0 ]; then
@@ -32,7 +32,7 @@ start() {
 }
 
 stop() {
-    echo -n "Stopping Wazuh: "
+    echo -n "Stopping Overwatch: "
     ${WAZUH_CONTROL} stop > /dev/null
     RETVAL=$?
     if [ $RETVAL -eq 0 ]; then
