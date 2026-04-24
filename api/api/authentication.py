@@ -92,7 +92,7 @@ def check_user(user: str, password: str, required_scopes=None) -> Union[dict, No
 
 
 # Set JWT settings
-JWT_ISSUER = 'wazuh'
+JWT_ISSUER = 'overwatch'
 JWT_ALGORITHM = 'ES512'
 _private_key_path = os.path.join(SECURITY_PATH, 'private_key.pem')
 _public_key_path = os.path.join(SECURITY_PATH, 'public_key.pem')
@@ -285,7 +285,7 @@ def generate_token(user_id: str = None, data: dict = None, auth_context: dict = 
 
     payload = {
                   "iss": JWT_ISSUER,
-                  "aud": "Wazuh API REST",
+                  "aud": "Overwatch API REST",
                   "nbf": now_seconds,  # Standard claim: integer seconds since epoch (RFC 7519)
                   "nbf_ms": now_ms,  # Private claim: milliseconds for precise validation
                   "exp": now_seconds + result['auth_token_exp_timeout'],
@@ -364,7 +364,7 @@ def decode_token(token: str) -> dict:
     """
     try:
         # Decode JWT token with local secret
-        payload = jwt.decode(token, generate_keypair()[1], algorithms=[JWT_ALGORITHM], audience='Wazuh API REST')
+        payload = jwt.decode(token, generate_keypair()[1], algorithms=[JWT_ALGORITHM], audience='Overwatch API REST')
 
         # Check token and add processed policies in the Master node
         # Use nbf_ms for millisecond precision validation, fallback to nbf * 1000 for backward compatibility

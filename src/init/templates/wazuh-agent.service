@@ -1,5 +1,5 @@
 [Unit]
-Description=Wazuh agent
+Description=Overwatch agent
 Wants=network-online.target
 After=network.target network-online.target
 

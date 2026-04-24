@@ -132,7 +132,7 @@ Install()
 
     # For updates, stop running services before replacing files.
     if [ "X${update_only}" = "Xyes" ]; then
-        echo "Stopping Wazuh..."
+        echo "Stopping Overwatch..."
         UpdateStopWAZUH
     fi
 
@@ -150,14 +150,14 @@ Install()
         WazuhUpgrade $INSTYPE
         # Compatibility migration for very old versions.
         UpdateOldVersions
-        echo "Starting Wazuh..."
+        echo "Starting Overwatch..."
         UpdateStartWAZUH
     fi
 
     if [ $runinit_value = 1 ]; then
         notmodified="yes"
     elif [ "X$START_WAZUH" = "Xyes" ]; then
-        echo "Starting Wazuh..."
+        echo "Starting Overwatch..."
         UpdateStartWAZUH
     fi
 
@@ -501,7 +501,7 @@ AddPFTable()
     echo ""
     echo "   - ${pfmessage}:"
     echo "     ${moreinfo}"
-    echo "     https://documentation.wazuh.com"
+    echo "     https://docs.overwatch.io"
 
     echo ""
     echo ""
@@ -662,13 +662,13 @@ detectPreinstalledDirForInstallType()
     fi
 
     if ! isWazuhInstalled "$PREINSTALLEDDIR"; then
-        PREINSTALL_DETECTION_ERROR="A ${pidir_service_name} service entry points to '${PREINSTALLEDDIR}', but no Wazuh control binary was found there."
+        PREINSTALL_DETECTION_ERROR="A ${pidir_service_name} service entry points to '${PREINSTALLEDDIR}', but no Overwatch control binary was found there."
         return 2
     fi
 
     PRE_TYPE=$(getPreinstalledType)
     if [ "X$PRE_TYPE" = "X" ]; then
-        PREINSTALL_DETECTION_ERROR="A Wazuh control binary was found in '${PREINSTALLEDDIR}', but its installation type could not be determined."
+        PREINSTALL_DETECTION_ERROR="An Overwatch control binary was found in '${PREINSTALLEDDIR}', but its installation type could not be determined."
         return 2
     fi
     PREINSTALL_DETECTED_TYPE="${PRE_TYPE}"
@@ -810,7 +810,7 @@ A clean installation is required for managers."
         fi
         echo ""
         echo "For more information, visit:"
-        echo "  https://documentation.wazuh.com/current/upgrade-guide/"
+        echo "  https://docs.overwatch.io/current/upgrade-guide/"
         echo "═════════════════════════════════════════════════════════════════"
         echo ""
         exit 1
@@ -885,7 +885,7 @@ main()
     fi
 
     # Installer banner.
-    echo " $NAME $VERSION (Rev. $REVISION) ${installscript} - https://www.wazuh.com"
+    echo " $NAME $VERSION (Rev. $REVISION) ${installscript} - https://overwatch.io"
     catMsg "0x101-initial"
     echo ""
     echo "  - $system: $UNAME (${DIST_NAME} ${DIST_VER}.${DIST_SUBVER})"
@@ -1053,13 +1053,13 @@ main()
         echo " - ${addserveragent}"
         echo ""
         echo "   ${moreinfo}"
-        echo "   https://documentation.wazuh.com/"
+        echo "   https://docs.overwatch.io/"
         echo ""
 
     elif [ "X$INSTYPE" = "Xagent" ]; then
         echo ""
         echo " - ${moreinfo}"
-        echo "   https://documentation.wazuh.com/"
+        echo "   https://docs.overwatch.io/"
         echo ""
     fi
 

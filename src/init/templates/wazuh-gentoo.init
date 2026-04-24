@@ -1,6 +1,6 @@
 #!/sbin/runscript
-# Gentoo init script for Wazuh
-# Copyright (C) 2015, Wazuh Inc.
+# Gentoo init script for Overwatch
+# Copyright (C) 2015, Overwatch Inc.
 # by gentuxx <gentuxx@gmail.com>
 
 opts="${opts} status configtest"
@@ -14,7 +14,7 @@ depend() {
 }
 
 configtest() {
-    ebegin "Checking Wazuh Configuration"
+    ebegin "Checking Overwatch Configuration"
     checkconfig
     eend $?
 }
@@ -33,24 +33,24 @@ checkconfig() {
 
 start() {
     checkconfig || return 1
-    ebegin "Starting Wazuh"
+    ebegin "Starting Overwatch"
     ${WAZUH_CONTROL} start > /dev/null 2>&1
     eend $?
 }
 
 stop() {
     checkconfig || return 1
-    ebegin "Stopping Wazuh"
+    ebegin "Stopping Overwatch"
     ${WAZUH_CONTROL} stop > /dev/null 2>&1
     eend $?
 }
 
 restart() {
     if ! service_started "${myservice}" ; then
-        eerror "Wazuh is not running! Please start it before trying to reload it."
+        eerror "Overwatch is not running! Please start it before trying to reload it."
     else
         checkconfig || return 1
-        ebegin "Reloading Wazuh"
+        ebegin "Reloading Overwatch"
         svc_stop ${WAZUH_CONTROL}
         svc_start ${WAZUH_CONTROL}
         eend $?
