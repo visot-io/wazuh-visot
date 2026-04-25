@@ -35,7 +35,7 @@ security_conf = WazuhResult({
 })
 decoded_payload = {
     "iss": 'overwatch',
-    "aud": 'Wazuh API REST',
+    "aud": 'Overwatch API REST',
     "nbf": 0,
     "nbf_ms": 0,
     "exp": security_conf['auth_token_exp_timeout'],
@@ -234,7 +234,7 @@ async def test_decode_token(mock_raise_if_exc, mock_distribute_function, mock_da
     mock_generate_keypair.assert_called_once()
     mock_decode.assert_called_once_with('test_token', '-----BEGIN PUBLIC KEY-----',
                                         algorithms=['ES512'],
-                                        audience='Wazuh API REST')
+                                        audience='Overwatch API REST')
     assert mock_distribute_function.call_count == 2
     assert mock_raise_if_exc.call_count == 2
 

@@ -89,7 +89,7 @@ async def access_log(request: ConnexionRequest, response: Response, prev_time: t
             elif auth_type == 'bearer':
                 s = jwt.decode(user_passw, generate_keypair()[1],
                             algorithms=[JWT_ALGORITHM],
-                            audience='Wazuh API REST',
+                            audience='Overwatch API REST',
                             options={'verify_exp': False})
                 user = s['sub']
                 if HASH_AUTH_CONTEXT_KEY in s:
