@@ -28,7 +28,7 @@ class APIException(Exception):
         self.exceptions = {
             2000: 'Some parameters are not expected in the configuration file '
                   f"(WAZUH_PATH/{RELATIVE_CONFIG_FILE_PATH}). Please check the documentation for further details: "
-                  f"https://documentation.wazuh.com/{DOCU_VERSION}/user-manual/api/configuration.html"
+                  f"https://docs.overwatch.io/{DOCU_VERSION}/user-manual/api/configuration.html"
                   '#api-configuration-options',
             2003: 'Error loading SSL/TLS certificates',
             2004: 'Configuration file could not be loaded',

@@ -40,7 +40,7 @@ LOGIN_ENDPOINT = '/security/user/authenticate'
 HASH_AUTH_CONTEXT_KEY = 'hash_auth_context'
 
 # API secure headers
-server = Server().set("Wazuh")
+server = Server().set("Overwatch")
 csp = ContentSecurityPolicy().set('none')
 xfo = XFrameOptions().deny()
 secure_headers = Secure(server=server, csp=csp, xfo=xfo)
