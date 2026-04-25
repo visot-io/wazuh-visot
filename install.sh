@@ -501,7 +501,7 @@ AddPFTable()
     echo ""
     echo "   - ${pfmessage}:"
     echo "     ${moreinfo}"
-    echo "     https://docs.overwatch.io"
+    echo "     https://docs.overwatch.tt"
 
     echo ""
     echo ""
@@ -810,7 +810,7 @@ A clean installation is required for managers."
         fi
         echo ""
         echo "For more information, visit:"
-        echo "  https://docs.overwatch.io/current/upgrade-guide/"
+        echo "  https://docs.overwatch.tt/current/upgrade-guide/"
         echo "═════════════════════════════════════════════════════════════════"
         echo ""
         exit 1
@@ -885,7 +885,7 @@ main()
     fi
 
     # Installer banner.
-    echo " $NAME $VERSION (Rev. $REVISION) ${installscript} - https://overwatch.io"
+    echo " $NAME $VERSION (Rev. $REVISION) ${installscript} - https://overwatch.tt"
     catMsg "0x101-initial"
     echo ""
     echo "  - $system: $UNAME (${DIST_NAME} ${DIST_VER}.${DIST_SUBVER})"
@@ -1053,13 +1053,13 @@ main()
         echo " - ${addserveragent}"
         echo ""
         echo "   ${moreinfo}"
-        echo "   https://docs.overwatch.io/"
+        echo "   https://docs.overwatch.tt/"
         echo ""
 
     elif [ "X$INSTYPE" = "Xagent" ]; then
         echo ""
         echo " - ${moreinfo}"
-        echo "   https://docs.overwatch.io/"
+        echo "   https://docs.overwatch.tt/"
         echo ""
     fi
 

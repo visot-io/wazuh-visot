@@ -236,7 +236,7 @@ def generate_self_signed_certificate(private_key: rsa.RSAPrivateKey, certificate
         x509.NameAttribute(NameOID.STATE_OR_PROVINCE_NAME, u"California"),
         x509.NameAttribute(NameOID.LOCALITY_NAME, u"San Francisco"),
         x509.NameAttribute(NameOID.ORGANIZATION_NAME, u"Overwatch"),
-        x509.NameAttribute(NameOID.COMMON_NAME, u"overwatch.io"),
+        x509.NameAttribute(NameOID.COMMON_NAME, u"overwatch.tt"),
     ])
     cert = x509.CertificateBuilder().subject_name(
         subject

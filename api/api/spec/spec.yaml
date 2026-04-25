@@ -363,7 +363,7 @@ components:
             detail: "Permission denied: Resource type: *:*"
             remediation: "Please, make sure you have permissions to execute the current request. For more information
             on how to set up permissions, please visit
-            https://docs.overwatch.io/main/user-manual/api/rbac/configuration.html"
+            https://docs.overwatch.tt/main/user-manual/api/rbac/configuration.html"
             error: 4000
             dapi_errors:
               unknown-node:
@@ -430,7 +430,7 @@ components:
             title: "Overwatch Error"
             detail: "Maximum number of requests per minute reached"
             remediation: "This limit can be changed in api.yaml file. More information here:
-            https://docs.overwatch.io/main/user-manual/api/security/configuration.html"
+            https://docs.overwatch.tt/main/user-manual/api/security/configuration.html"
             code: 6001
 
     ResourceNotFoundResponse:
@@ -443,7 +443,7 @@ components:
             title: "Resource Not Found"
             detail: "The group does not exist"
             remediation: "Please, use `GET /groups` to find all available groups:
-            https://docs.overwatch.io/main/user-manual/api/rbac/configuration.html"
+            https://docs.overwatch.tt/main/user-manual/api/rbac/configuration.html"
             code: 1710
             dapi_errors:
               unknown-node:
@@ -5547,8 +5547,8 @@ paths:
                           code: 1707
                           message: "Cannot send request, agent is not active"
                           remediation: "Please, check non-active agents connection and try again.
-                           Visit https://docs.overwatch.io/main/user-manual/registering/index.html
-                           and https://docs.overwatch.io/main/user-manual/agents/agent-connection.html
+                           Visit https://docs.overwatch.tt/main/user-manual/registering/index.html
+                           and https://docs.overwatch.tt/main/user-manual/agents/agent-connection.html
                            to obtain more information on registering and connecting agents"
                         id:
                           - '009'
@@ -5658,8 +5658,8 @@ paths:
                           code: 1707
                           message: "Cannot send request, agent is not active"
                           remediation: "Please, check non-active agents connection and try again.
-                           Visit https://docs.overwatch.io/main/user-manual/registering/index.html
-                           and https://docs.overwatch.io/main/user-manual/agents/agent-connection.html
+                           Visit https://docs.overwatch.tt/main/user-manual/registering/index.html
+                           and https://docs.overwatch.tt/main/user-manual/agents/agent-connection.html
                            to obtain more information on registering and connecting agents"
                         id:
                           - '009'
@@ -10076,4 +10076,4 @@ paths:
 
 externalDocs:
   description: "Learn more about the Wazuh API"
-  url: 'https://docs.overwatch.io/main/user-manual/api/index.html'
+  url: 'https://docs.overwatch.tt/main/user-manual/api/index.html'

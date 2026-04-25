@@ -17,7 +17,7 @@ setup(
     name='api',
     version='5.0.0',
     description="Overwatch API",
-    author_email="hello@overwatch.io",
+    author_email="hello@overwatch.tt",
     author="Overwatch",
     url="https://github.com/visot-io",
     keywords=["Overwatch API"],
